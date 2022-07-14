@@ -1,0 +1,1 @@
+/home/ls807terra/Programs/bftools/bftools/bfconvert -channel 1 "/home/ls807terra/Programs/bftools/test_file/siTIRR-2(A4)_TIRR_03_Multichannel Z-Stack_20200727_23119.vsi" "/home/ls807terra/Programs/bftools/test_file/siTIRR-2(A4)_TIRR_03_Multichannel Z-Stack_20200727_23119.%z.tiff"
