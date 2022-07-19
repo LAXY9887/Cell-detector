@@ -21,7 +21,7 @@ Args:
 import subprocess
 import os
 
-bfconvert = ".\\bftools\\bfconvert_VSI_to_TIFF.sh"
+bfconvert = ".\\bfconvert_VSI_to_TIFF.sh"
 
 def bfconvert_VSI_to_TIFF(VSI,outDir):
     """ Check outDir, if not exist, create it."""
