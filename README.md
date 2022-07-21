@@ -29,6 +29,10 @@ By doing this conversion, I can separate different flourescent channels and Z-st
 
 The reason why I didn't call `bfconvert` is that bugs happends upon subprocess handel `%c` or `%z` in the args* list, which is essential to separate Channel and Z-stacks by `bfconvert`. Therefore, I write the expression in a separate shell script `bfconvert_VSI_to_TIFF.sh` to avoid passing `%c` or `%z` to subprocess.
 
-## 2022-07-19 Next plane
+## 2022-07-21 Update
+
+Use `concurrent.futures.processpoolexecutor` to achieve multi-process on converting many VSI files.
+
+## 2022-07-21 Next plane
 
 Next step is to obtain pixel values and process the image to tensor, preparing for model training dataLoader.
