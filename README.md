@@ -33,6 +33,20 @@ The reason why I didn't call `bfconvert` is that bugs happends upon subprocess h
 
 Use `concurrent.futures.processpoolexecutor` to achieve multi-process on converting many VSI files.
 
+**Note:** When calling `processpoolexecutor.map()` in the **main.py** script, `if __name__ == '__main__' ` should be add, otherwise, RuntimeERROR could occur, message as follow:
+```
+RuntimeError: 
+            Attempt to start a new process before the current process
+            has finished its bootstrapping phase.
+            This probably means that you are on Windows and you have
+            forgotten to use the proper idiom in the main module:
+                if __name__ == '__main__':
+                    freeze_support()
+                    ...
+            The "freeze_support()" line can be omitted if the program
+            is not going to be frozen to produce a Windows executable.
+```
+
 ## 2022-07-21 Next plane
 
 Next step is to obtain pixel values and process the image to tensor, preparing for model training dataLoader.
