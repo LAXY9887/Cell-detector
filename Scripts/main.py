@@ -4,11 +4,15 @@ Created on Tue Jul 19 14:45:19 2022
 
 @author: Cryptomero‧Zero
 
+This is the main function that does everything.
+
 """
 
-from bftools_VSI_to_TIFF import bfconvert_VSI_to_TIFF
+from bftools_VSI_to_TIFF import Bftools
 
-VSI = "D:/Github-repository/Cell-detector/Testing/VSI/PLA-RNH_01.vsi"
-outDir = "D:/Github-repository/Cell-detector/Testing/TIFFs/TEST1"
+VSI_Dir = "D:/Github-repository/Cell-detector/Testing/VSI_02"
+outDir = "D:/Github-repository/Cell-detector/Testing/TIFFs/TEST3"
 
-bfconvert_VSI_to_TIFF(VSI,outDir)
+if __name__ == '__main__':
+    bftools = Bftools()
+    bftools.bfconvert_VSI_to_TIFF_multiP(VSI_Dir,outDir)
